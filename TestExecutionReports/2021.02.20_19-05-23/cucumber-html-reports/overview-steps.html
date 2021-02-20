@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Test Framework</td>
+              <td>1</td>
+            <td>21 Feb 2021, 00:38</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.enter_the_and()</td>
+              <td>2</td>
+              <td class="duration" data-value="3543373800">3.543</td>
+              <td class="duration" data-value="3543373800">3.896</td>
+              <td class="duration" data-value="7086747600">7.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_access_the_application_url()</td>
+              <td>2</td>
+              <td class="duration" data-value="9087338100">9.087</td>
+              <td class="duration" data-value="9087338100">10.490</td>
+              <td class="duration" data-value="18174676200">18.174</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_add_the_t_shirt_to_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="539029600">0.539</td>
+              <td class="duration" data-value="539029600">0.539</td>
+              <td class="duration" data-value="539029600">0.539</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_click_on_back_orders()</td>
+              <td>1</td>
+              <td class="duration" data-value="3470750500">3.470</td>
+              <td class="duration" data-value="3470750500">3.470</td>
+              <td class="duration" data-value="3470750500">3.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_click_on_personal_information()</td>
+              <td>1</td>
+              <td class="duration" data-value="2224817800">2.224</td>
+              <td class="duration" data-value="2224817800">2.224</td>
+              <td class="duration" data-value="2224817800">2.224</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_click_on_proceed_to_check_out()</td>
+              <td>1</td>
+              <td class="duration" data-value="3858795100">3.858</td>
+              <td class="duration" data-value="3858795100">3.858</td>
+              <td class="duration" data-value="3858795100">3.858</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_click_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2102106500">2.102</td>
+              <td class="duration" data-value="2102106500">2.102</td>
+              <td class="duration" data-value="2102106500">2.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_enter_click_on_sign_in_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="4133355450">4.133</td>
+              <td class="duration" data-value="4133355450">5.395</td>
+              <td class="duration" data-value="8266710900">8.266</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_proceed_to_checkout_the(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="14323364700">14.323</td>
+              <td class="duration" data-value="14323364700">14.323</td>
+              <td class="duration" data-value="14323364700">14.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_search_for_the_product(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2868934000">2.868</td>
+              <td class="duration" data-value="2868934000">2.868</td>
+              <td class="duration" data-value="2868934000">2.868</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_should_be_able_to_order_the_successfully(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="796930500">0.796</td>
+              <td class="duration" data-value="796930500">0.796</td>
+              <td class="duration" data-value="796930500">0.796</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_should_login_successfully()</td>
+              <td>2</td>
+              <td class="duration" data-value="79502000">0.079</td>
+              <td class="duration" data-value="79502000">0.087</td>
+              <td class="duration" data-value="159004000">0.159</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_should_navigate_to_the_cart_summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="13001000">0.013</td>
+              <td class="duration" data-value="13001000">0.013</td>
+              <td class="duration" data-value="13001000">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_should_navigate_to_the_search_results_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="253015500">0.253</td>
+              <td class="duration" data-value="253015500">0.253</td>
+              <td class="duration" data-value="253015500">0.253</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_update_the_current_password_and_new_passowrd(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1502085900">1.502</td>
+              <td class="duration" data-value="1502085900">1.502</td>
+              <td class="duration" data-value="1502085900">1.502</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.i_update_the_first_name_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="748509500">0.748</td>
+              <td class="duration" data-value="748509500">0.748</td>
+              <td class="duration" data-value="748509500">0.748</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.order_history_should_be_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="16001700">0.016</td>
+              <td class="duration" data-value="16001700">0.016</td>
+              <td class="duration" data-value="16001700">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.update_should_be_successful()</td>
+              <td>1</td>
+              <td class="duration" data-value="96006200">0.096</td>
+              <td class="duration" data-value="96006200">0.096</td>
+              <td class="duration" data-value="96006200">0.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.AppStepDefinitions.validate_order_reference_is_displayed_in_order_history()</td>
+              <td>1</td>
+              <td class="duration" data-value="1329521500">1.329</td>
+              <td class="duration" data-value="1329521500">1.329</td>
+              <td class="duration" data-value="1329521500">1.329</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.Hooks.close()</td>
+              <td>2</td>
+              <td class="duration" data-value="1485896250">1.485</td>
+              <td class="duration" data-value="1485896250">1.686</td>
+              <td class="duration" data-value="2971792500">2.971</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.qualitest.raman.stepDefinition.Hooks.setUpDriver()</td>
+              <td>2</td>
+              <td class="duration" data-value="17113707450">17.113</td>
+              <td class="duration" data-value="17113707450">22.283</td>
+              <td class="duration" data-value="34227414900">34.227</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>27</td>
+            <td class="duration">3.889</td>
+            <td class="duration">34.227</td>
+            <td class="duration">1:45.029</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
