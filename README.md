@@ -23,10 +23,10 @@ Once the build is successful, run the tests using below command,
 ```Note: By default two scenarios would be picked up for execution```
 
 #### Reports
-Please check `TestExutionReports` folder for test execution reports.
+Please check `TestExecutionReports` folder for test execution reports.
 Note: under this folder a subfolder will be created with test execution date and time stamp.
-eg: TestExutionReports-->Date/time-->cucumber-html-reports-->overview-features.html (open with chrome browser)
-Examaple Path: TestExecutionReports/2021.02.20_18-31-27/cucumber-html-reports/overview-features.html
+eg: `TestExutionReports-->Date/time-->cucumber-html-reports-->overview-features.html` (open with chrome browser)
+Examaple Path: `TestExecutionReports/2021.02.20_18-31-27/cucumber-html-reports/overview-features.html`
 
 ### Developer
 Please contact email: `raman.pasala@gmail.com` for any details
