@@ -7,7 +7,7 @@ This framework contains automation test pack for MyAccount store
 #### Build
 Clone the project form below repository:
 
-``https://github.com/raman805551/automation-selenium-bdd.git```
+``https://github.com/raman805551/cucumber-selenium-java-framework.git```
 Run the below command to build and download the dependencies required for the project
 `mvn clean`
 Note: Ensure Maven and Java are configured in local environmental variables 
