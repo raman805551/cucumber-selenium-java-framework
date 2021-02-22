@@ -10,72 +10,69 @@ public class MyAccountPage extends InitPage {
 	public MyAccountPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	@FindBy(id="search_query_top")
-	private WebElement searchBox;
-	
+	private WebElement txtSearchBox;
+
 	@FindBy(name="submit_search")
-	private WebElement searchButton;
-	
-	
+	private WebElement searchBtn;
+
+
 	@FindBy(xpath="//span[text()='My personal information']")
-	private WebElement personalInformation;
-	
-	
+	private WebElement personalInfo;
+
+
 	@FindBy(id="firstname")
 	private WebElement firstName;
-	
+
 	@FindBy(name="submitIdentity")
-	private WebElement save;
+	private WebElement saveBtn;
 
 	@FindBy(id="old_passwd")
-	private WebElement oldPassword;
-	
+	private WebElement oldPwd;
+
 	@FindBy(id="passwd")
-	private WebElement newPassword;
-	
-	
+	private WebElement newPwd;
+
 	@FindBy(id="confirmation")
-	private WebElement confirmPassword;
-	
-	
-	
+	private WebElement confirmPwd;
+
 	@FindBy(xpath="//p[contains(text(),'Your personal information has been successfully updated.')]")
 	private WebElement updateConfirmationMessage;
-	
-	
-	public void validateMyAccountPageIsDisplayed() {
+
+
+	public void validateMyAccountPage() {
 		wait.until(ExpectedConditions.titleIs("My account - My Store"));
 	}
-	
-	public SearchResultsPage searchForTheProduct(String productName){
-		this.searchBox.sendKeys(productName);
-		this.searchButton.click();
-		return new SearchResultsPage(driver);
+
+	public ResultsPage searchForProduct(String productName){
+		this.txtSearchBox.sendKeys(productName);
+		this.searchBtn.click();
+		return new ResultsPage(driver);
 	}
-	
-	public void clickOnPersonalInformation() {
-		wait.until(ExpectedConditions.visibilityOf(personalInformation));
-		this.personalInformation.click();
+
+	public void clickOnPersonalInfo() {
+		wait.until(ExpectedConditions.visibilityOf(personalInfo));
+		this.personalInfo.click();
 	}
-	
+
 	public void updateFirstName(String newName) {
 		wait.until(ExpectedConditions.visibilityOf(firstName));
 		this.firstName.clear();
 		this.firstName.sendKeys(newName);
 	}
-	
+
 	public void updatePassword(String oldPassword, String newPassword) {
-		this.oldPassword.sendKeys(oldPassword);
-		this.newPassword.sendKeys(newPassword);
-		this.confirmPassword.sendKeys(newPassword);
+		this.oldPwd.sendKeys(oldPassword);
+		this.newPwd.sendKeys(newPassword);
+		this.confirmPwd.sendKeys(newPassword);
 	}
-	
-	public void clickOnSave() {
-		this.save.click();
+
+	public void clickSave() {
+		this.saveBtn.click();
 	}
-	
-	public void validateUpdateIsSuccessful() {
+
+	public void validateUpdate() {
 		wait.until(ExpectedConditions.visibilityOf(updateConfirmationMessage));
 	}
 }

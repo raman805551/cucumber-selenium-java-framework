@@ -10,22 +10,22 @@ public class SignInPage extends InitPage {
 		super(driver);
 	}
 
-	
+
 	@FindBy(id="email")
-	private WebElement emailText;
-	
+	private WebElement email;
+
 	@FindBy(id="passwd")
-	private WebElement passwordText;
-	
+	private WebElement password;
+
 	@FindBy(id="SubmitLogin")
 	private WebElement submitButton;
-	
-	
-	public MyAccountPage enterTheCredentials(String userName, String password) {
-		this.emailText.sendKeys(userName);
-		this.passwordText.sendKeys(password);
+
+
+	public MyAccountPage enterTheCredential(String userName, String password) {
+		this.email.sendKeys(userName);
+		this.password.sendKeys(password);
 		this.submitButton.click();
 		return new MyAccountPage(driver);
 	}
-	
+
 }

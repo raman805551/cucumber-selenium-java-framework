@@ -8,40 +8,40 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SearchResultsPage extends InitPage {
-	
-	public SearchResultsPage(WebDriver driver) {
+public class ResultsPage extends InitPage {
+
+	public ResultsPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	@FindBy(id="selectProductSort")
-	private WebElement sortByDropDown;
-	
+	private WebElement sortBy;
+
 	@FindBy(className="product_img_link")
 	private List<WebElement> productsList;
-	
+
 	@FindBy(xpath="//span[text()='Add to cart']")
-	private WebElement addToCart;
-	
+	private WebElement addToCarts;
+
 	@FindBy(xpath="//span[contains(text(),'Proceed to checkout')]")
-	private WebElement proceedToCheckOut;
-	
+	private WebElement proceedCheckOut;
+
 	@FindBy(xpath="//img[@title='Faded Short Sleeve T-shirts']")
-	private WebElement product;
-	
+	private WebElement products;
+
 	public void verifySearchResultsPageIsLoaded() {
-		wait.until(ExpectedConditions.visibilityOfAllElements(productsList));		
+		wait.until(ExpectedConditions.visibilityOfAllElements(productsList));
 	}
-	
-	public void clickOnAddtoCartButton() {
+
+	public void clickOnAddtoCartButtons() {
 		Actions action = new Actions(driver);
-		action.moveToElement(product).build().perform();
-		this.addToCart.click();	
+		action.moveToElement(products).build().perform();
+		this.addToCarts.click();
 	}
-	
-	public SummaryPage clickOnProceedToCheckout() {
-		wait.until(ExpectedConditions.elementToBeClickable(proceedToCheckOut));
-		this.proceedToCheckOut.click();
-		return new SummaryPage(driver);
+
+	public UserSummaryPage clickOnProceedCheckout() {
+		wait.until(ExpectedConditions.elementToBeClickable(proceedCheckOut));
+		this.proceedCheckOut.click();
+		return new UserSummaryPage(driver);
 	}
 }

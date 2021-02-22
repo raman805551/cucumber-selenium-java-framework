@@ -1,4 +1,4 @@
-package com.qualitest.raman.utils;
+package com.qualitest.raman.utilities;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -6,11 +6,11 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestUtils {
+public class TestUtilities {
 	
 	Properties prop;
 	
-	public TestUtils(Properties prop){
+	public TestUtilities(Properties prop){
 		this.prop = prop;
 	}
 	

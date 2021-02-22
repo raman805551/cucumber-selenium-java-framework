@@ -5,10 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import com.qualitest.raman.stepDefinition.SetUp;
 import org.openqa.selenium.WebDriver;
 
-import com.qualitest.raman.utils.TestUtils;
+import com.qualitest.raman.utilities.TestUtilities;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -28,8 +27,8 @@ public class Hooks {
         } catch (IOException io) {
             io.printStackTrace();
         }
-		TestUtils testUtils = new TestUtils(prop);
-		driver = testUtils.invokeDriver();
+		TestUtilities testUtilities = new TestUtilities(prop);
+		driver = testUtilities.invokeDriver();
 		setUp.setDriver(driver);
 		setUp.setProp(prop);
 	}

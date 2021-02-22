@@ -7,21 +7,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class OrderHistoryPage extends InitPage {
+public class HistoryPage extends InitPage {
 
-	public OrderHistoryPage(WebDriver driver) {
+	public HistoryPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	@FindBy(className="color-myaccount")
-	private List<WebElement> orders;
-	
+	private List<WebElement> ordersList;
+
 	public void valiateOrderHistoryPageIsDisplayed() {
 		wait.until(ExpectedConditions.titleIs("Order history - My Store"));
 	}
-	
+
 	public void verifyOrdersAreDisplayed() {
-		wait.until(ExpectedConditions.visibilityOfAllElements(orders));
+		wait.until(ExpectedConditions.visibilityOfAllElements(ordersList));
 	}
 
 }
